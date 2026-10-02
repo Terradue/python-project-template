@@ -110,7 +110,7 @@ Prefer generating projects from a tag rather than directly from `main`.
 From another directory, run:
 
 ```bash
-copier copy --vcs-ref v0.5.0 https://github.com/Terradue/python-project-template.git just-test
+copier copy --vcs-ref v0.6.0 https://github.com/Terradue/python-project-template.git just-test
 ```
 
 Copier will ask for project metadata such as project name, package name, author, repository URL, and documentation URL.
