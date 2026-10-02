@@ -45,26 +45,6 @@ project_description:
   help: One-line project description
   default: "A Python project generated from the Terradue Python archetype."
 
-author_name:
-  type: str
-  help: Author or organization name
-  default: "Terradue"
-
-author_email:
-  type: str
-  help: Author contact email
-  default: "info@terradue.com"
-
-repository_url:
-  type: str
-  help: GitHub repository URL
-  default: "https://github.com/{{ author_name }}/{{ project_slug }}"
-
-documentation_url:
-  type: str
-  help: Published documentation URL
-  default: "https://{{ author_name }}.github.io/{{ project_slug }}/"
-
 copyright_year:
   type: str
   help: Copyright year
