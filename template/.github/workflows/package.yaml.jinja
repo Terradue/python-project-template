@@ -54,13 +54,13 @@ jobs:
     - uses: actions/checkout@v7.0.1
 
     - name: Set up Python
-      uses: actions/setup-python@v7.0.0
+      uses: actions/setup-python@v7.1.0
       with:
         python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
         cache: "pip"
 
     - name: Install tooling
-      run: pip install hatch
+      run: pip install hatch==1.18.2
 
     # -----------------------------
     # Strict SemVer + Hatch version gate
@@ -104,7 +104,7 @@ jobs:
 
     - name: Upload coverage to Codecov
       if: github.event_name == 'push' && matrix.python-version == '3.12'
-      uses: codecov/codecov-action@v7
+      uses: codecov/codecov-action@v7.1.1
       with:
         use_oidc: true
         files: ./coverage.xml
@@ -123,13 +123,13 @@ jobs:
     - uses: actions/checkout@v7.0.1
 
     - name: Set up Python
-      uses: actions/setup-python@v7.0.0
+      uses: actions/setup-python@v7.1.0
       with:
         python-version: '3.12'
         cache: pip
 
     - name: Install Hatch
-      run: pip install hatch
+      run: pip install hatch==1.18.2
 
     - name: Verify tag matches project version
       run: |
@@ -150,4 +150,4 @@ jobs:
         hatch build
 
     - name: Publish to PyPI
-      uses: pypa/gh-action-pypi-publish@v1.14.2
+      uses: pypa/gh-action-pypi-publish@v1.14.3
